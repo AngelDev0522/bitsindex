@@ -1,0 +1,225 @@
+/*****************************************************************************
+* Main document
+*****************************************************************************/
+/*
+html, main {
+	height: 100%;
+}
+
+body {
+	background:#353535;
+	height: calc(100% - 48px);
+}
+
+.page {
+	color: #fff;
+}
+
+h2 {
+	color:#fff;
+	text-transform:uppercase;
+	letter-spacing:.25em;
+	font-size:17px;
+	line-height:1.4;
+	padding:70px 20px 0;
+}
+
+h2 span {
+	display:block;
+	color:#ffd307;
+}
+
+nav {
+	background-color: #1f1f1f;
+}
+
+.btn-normal {
+	padding:4px 26px;
+	background-color:#16b5dd;
+	text-transform:uppercase;
+	letter-spacing:.04em;
+	width:210px;
+	color: white;
+}
+
+.btn-bottom {
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	padding:4px 26px;
+	background-color:#16b5dd;
+	text-transform:uppercase;
+	letter-spacing:.04em;
+	width:210px;
+	color: white;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+
+.screen-container-top {
+	padding:20px;
+	background:#353535;
+}
+
+.screen-container-btm {
+	padding-left: 15px;
+	padding-right: 15px;
+} */
+
+#brand {
+	text-transform:uppercase;
+}
+
+svg {
+	height: 75px;
+	width: 75px;
+	fill: #f9c31b;
+}
+
+svg.down-arrow {
+	height: 25px;
+	width: 75px;
+	fill: #353535;
+}
+
+.system-info {
+	color: #f9c31b;
+}
+
+/*****************************************************************************
+* Home Page
+*****************************************************************************/
+/*
+#home {
+	padding: 0;
+	height: 100%;
+}
+
+#home .top img {
+	max-width:165px;
+	margin:auto;
+	position:relative;
+	margin-top:15px;
+}
+
+#home .top {
+	height:60%;
+	background:url(/img/qrscan/qr-bg.jpg) no-repeat;
+	background-position:center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-o-background-size:cover;
+}
+
+#home .bottom {
+	height: 40%;
+	background-color: white;
+} */
+
+/*****************************************************************************
+* Scanning page
+*****************************************************************************/
+#scans {
+	color: #ccc;
+	text-align: center;
+}
+
+#snapshotLimitOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 80vmin;
+    height: 80vmin;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+#snapshotLimitOverlay:after {
+    content:'';
+/*
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+    box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.4);
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 80vmin !important;
+    height: 80vmin !important;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+#qr-canvas {
+    display: none;
+}
+
+/*****************************************************************************
+* Snackbar
+*****************************************************************************/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: black; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 50%; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 50%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 50%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
